@@ -75,28 +75,52 @@
 // console.log(person2);
 
 //switch statement
-let day = 5;
-let dayName;
+// let day = 5;
+// let dayName;
 
-switch (day) {
-  case 1:
-    dayName = "Moday";
-    break;
+// switch (day) {
+//   case 1:
+//     dayName = "Moday";
+//     break;
 
-  case 2:
-    dayName = "Tuesday";
-    break;
-  case 3:
-    dayName = "Wednesday";
-    break;
-  case 4:
-    dayName = "Thursday";
-    break;
-  case 5:
-    dayName = "Friday";
-    break;
+//   case 2:
+//     dayName = "Tuesday";
+//     break;
+//   case 3:
+//     dayName = "Wednesday";
+//     break;
+//   case 4:
+//     dayName = "Thursday";
+//     break;
+//   case 5:
+//     dayName = "Friday";
+//     break;
 
-  default:
-    dayName = "Weekend";
-}
-console.log(dayName);
+//   default:
+//     dayName = "Weekend";
+// }
+// console.log(dayName);
+
+//Evet listeners
+// Event listener are the funtions they wait for or respond to specific events that occur int the browser such as user interactions(cancelIdleCallback, key pressess) or system events (page loading, resizoing)
+
+// Element.addEventListener(getEffectiveConstraintOfTypeParameter, callbackFunction)
+
+// For example
+
+// const button = document.getElementById("myButton");
+// button.addEventListener("click", () => {
+//   console.log("Button was clicked");
+// });
+
+//Closures in Javascript
+const Counter = () => {
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCount((c) => c + 1);
+    }, 100);
+    return () => clearInterval(timer);
+  }, []);
+  return <div>{count}</div>;
+};
