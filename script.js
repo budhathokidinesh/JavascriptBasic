@@ -114,13 +114,47 @@
 // });
 
 //Closures in Javascript
-const Counter = () => {
-  const [count, setCount] = useState(0);
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCount((c) => c + 1);
-    }, 100);
-    return () => clearInterval(timer);
-  }, []);
-  return <div>{count}</div>;
-};
+// const Counter = () => {
+//   const [count, setCount] = useState(0);
+//   useEffect(() => {
+//     const timer = setInterval(() => {
+//       setCount((c) => c + 1);
+//     }, 100);
+//     return () => clearInterval(timer);
+//   }, []);
+//   return <div>{count}</div>;
+// };
+// const str = "dinesh";
+// const arr1 = str.split("");
+// console.log(arr1);
+
+//spread operator
+
+// const str = "dinesh";
+// const char = [...str];
+// console.log(char);
+
+//converting array into string
+// const fruits = ["apple", "banana", "orange"];
+// const fruits1 = fruits.toString(" ");
+// console.log(fruits1);
+
+// call aply bind
+// function greet(greeting, punctuatioon) {
+//   console.log(`${greeting}, ${this.name}${punctuatioon}`);
+// }
+// const Person = { name: "Dinesh" };
+// greet.call(Person, "hellow", "!");
+
+//Json parsing
+// const string = { name: "dinesh", age: "25" };
+// const user = JSON.stringify(string);
+// console.log(user);
+
+//Asynchronouse code is handled
+console.log("start");
+setTimeout(() => {
+  console.log("Timeout", 0);
+});
+Promise.resolve().then(() => console.log("promise"));
+console.log("end");
