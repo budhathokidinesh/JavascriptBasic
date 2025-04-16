@@ -152,9 +152,44 @@
 // console.log(user);
 
 //Asynchronouse code is handled
-console.log("start");
-setTimeout(() => {
-  console.log("Timeout", 0);
-});
-Promise.resolve().then(() => console.log("promise"));
-console.log("end");
+// console.log("start");
+// setTimeout(() => {
+//   console.log("Timeout", 0);
+// });
+// Promise.resolve().then(() => console.log("promise"));
+// console.log("end");
+
+//Javascript Timing methods
+// setTimeout(() => {
+//   console.log("This runs after 2 seconds");
+// }, 2000);
+// const timerId = setTimeout(() => {}, 1000);
+// clearTimeout(timerId);
+
+// let counter = 0;
+// const intervalId = setInterval(() => {
+//   counter++;
+//   console.log(`Tick ${counter}`);
+//   if (counter >= 10) {
+//     clearInterval(intervalId);
+//   }
+// }, 1000);
+// const now = new Date();
+// console.log(now);
+// const date1 = new Date(2023, 0, 1);
+// const date2 = new Date(2023, 5, 15);
+// const diff = date2 - date1;
+// console.log(diff / (1000 * 60 * 60 * 24));
+
+// const updateCountdown = () => {
+//   const now = new Date();
+//   const newYear = new Date(now.getFullYear() + 1, 0, 1);
+//   const diff = newYear - now;
+//   const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+//   console.log(`${days} days until new year!`);
+// };
+const num = [1, 2, 3];
+// const doubled = num.map((num) => num * 2);
+// console.log(doubled);
+const filtered = num.filter((number) => number > 1);
+console.log(filtered);
