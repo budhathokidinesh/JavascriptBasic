@@ -98,10 +98,44 @@
 // console.log(flatten(arr));
 
 //13.this is for rotating the array
-const arr = [1, 2, 3, 4];
-const rotate = (arr) => {
-  let last = arr.pop();
-  arr.unshift(last);
-  return arr;
+// const arr = [1, 2, 3, 4];
+// const rotate = (arr) => {
+//   let last = arr.pop();
+//   arr.unshift(last);
+//   return arr;
+// };
+// console.log(rotate(arr));
+
+//14. this is for counting the frequency
+// const str = "banana";
+// const charFrequency = (str) => {
+//   let map = {};
+//   for (let char of str) {
+//     map[char] = (map[char] || 0) + 1;
+//   }
+//   return map;
+// };
+// console.log(charFrequency(str));
+
+//15. merging the two arrays
+// const arr1 = [1, 2];
+// const arr2 = [3, 4];
+// const mergeArray = (arr1, arr2) => {
+//   return [...arr1, ...arr2];
+// };
+// console.log(mergeArray(arr1, arr2));
+
+//16. Finding the common elements
+// const a = [1, 2, 3];
+// const b = [2, 3, 4];
+// const commonElements = (a, b) => {
+//   return a.filter((x) => b.includes(x));
+// };
+// console.log(commonElements(a, b));
+
+//17. this is for sort numbers
+const arr = [4, 2, 9, 1];
+const sortNumbers = () => {
+  return arr.sort((a, b) => a - b);
 };
-console.log(rotate(arr));
+console.log(sortNumbers(arr));
